@@ -1,0 +1,7 @@
+syntax = "proto3";
+package dweb.dweb;
+
+option go_package = "dweb/x/dweb/types";
+
+// Msg defines the Msg service.
+service Msg {}

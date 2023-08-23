@@ -1,0 +1,12 @@
+syntax = "proto3";
+package dweb.dweb;
+
+import "gogoproto/gogo.proto";
+import "dweb/dweb/params.proto";
+
+option go_package = "dweb/x/dweb/types";
+
+// GenesisState defines the dweb module's genesis state.
+message GenesisState {
+  Params params = 1 [(gogoproto.nullable) = false];
+}
