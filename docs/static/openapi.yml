@@ -75214,6 +75214,8 @@ definitions:
       the connection handshake.
   nativedwebhosting.nativedwebhosting.MsgHostManifestResponse:
     type: object
+  nativedwebhosting.nativedwebhosting.MsgStorageResponse:
+    type: object
   nativedwebhosting.nativedwebhosting.Params:
     type: object
     description: Params defines the parameters for the module.

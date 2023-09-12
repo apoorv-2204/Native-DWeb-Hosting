@@ -27,6 +27,10 @@ const (
 	// TODO: Determine the simulation weight value
 	defaultWeightMsgHostManifest int = 100
 
+	opWeightMsgStorage = "op_weight_msg_storage"
+	// TODO: Determine the simulation weight value
+	defaultWeightMsgStorage int = 100
+
 	// this line is used by starport scaffolding # simapp/module/const
 )
 
@@ -66,6 +70,17 @@ func (am AppModule) WeightedOperations(simState module.SimulationState) []simtyp
 		nativedwebhostingsimulation.SimulateMsgHostManifest(am.accountKeeper, am.bankKeeper, am.keeper),
 	))
 
+	var weightMsgStorage int
+	simState.AppParams.GetOrGenerate(simState.Cdc, opWeightMsgStorage, &weightMsgStorage, nil,
+		func(_ *rand.Rand) {
+			weightMsgStorage = defaultWeightMsgStorage
+		},
+	)
+	operations = append(operations, simulation.NewWeightedOperation(
+		weightMsgStorage,
+		nativedwebhostingsimulation.SimulateMsgStorage(am.accountKeeper, am.bankKeeper, am.keeper),
+	))
+
 	// this line is used by starport scaffolding # simapp/module/operation
 
 	return operations
@@ -79,6 +94,14 @@ func (am AppModule) ProposalMsgs(simState module.SimulationState) []simtypes.Wei
 			defaultWeightMsgHostManifest,
 			func(r *rand.Rand, ctx sdk.Context, accs []simtypes.Account) sdk.Msg {
 				nativedwebhostingsimulation.SimulateMsgHostManifest(am.accountKeeper, am.bankKeeper, am.keeper)
+				return nil
+			},
+		),
+		simulation.NewWeightedProposalMsg(
+			opWeightMsgStorage,
+			defaultWeightMsgStorage,
+			func(r *rand.Rand, ctx sdk.Context, accs []simtypes.Account) sdk.Msg {
+				nativedwebhostingsimulation.SimulateMsgStorage(am.accountKeeper, am.bankKeeper, am.keeper)
 				return nil
 			},
 		),

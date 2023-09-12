@@ -7,6 +7,7 @@ option go_package = "github.com/apoorv-2204/Native-DWeb-Hosting/x/nativedwebhost
 // Msg defines the Msg service.
 service Msg {
   rpc HostManifest (MsgHostManifest) returns (MsgHostManifestResponse);
+  rpc Storage      (MsgStorage     ) returns (MsgStorageResponse     );
 }
 message MsgHostManifest {
   string creator      = 1;
@@ -15,4 +16,11 @@ message MsgHostManifest {
 }
 
 message MsgHostManifestResponse {}
+
+message MsgStorage {
+  string creator = 1;
+  string version = 2;
+}
+
+message MsgStorageResponse {}
 

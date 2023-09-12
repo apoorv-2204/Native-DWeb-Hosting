@@ -9,12 +9,16 @@ import (
 
 func RegisterCodec(cdc *codec.LegacyAmino) {
 	cdc.RegisterConcrete(&MsgHostManifest{}, "nativedwebhosting/HostManifest", nil)
+	cdc.RegisterConcrete(&MsgStorage{}, "nativedwebhosting/Storage", nil)
 	// this line is used by starport scaffolding # 2
 }
 
 func RegisterInterfaces(registry cdctypes.InterfaceRegistry) {
 	registry.RegisterImplementations((*sdk.Msg)(nil),
 		&MsgHostManifest{},
+	)
+	registry.RegisterImplementations((*sdk.Msg)(nil),
+		&MsgStorage{},
 	)
 	// this line is used by starport scaffolding # 3
 
