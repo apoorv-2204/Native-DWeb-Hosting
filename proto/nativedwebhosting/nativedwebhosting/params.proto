@@ -1,0 +1,12 @@
+syntax = "proto3";
+package nativedwebhosting.nativedwebhosting;
+
+import "gogoproto/gogo.proto";
+
+option go_package = "github.com/apoorv-2204/Native-DWeb-Hosting/x/nativedwebhosting/types";
+
+// Params defines the parameters for the module.
+message Params {
+  option (gogoproto.goproto_stringer) = false;
+  
+}

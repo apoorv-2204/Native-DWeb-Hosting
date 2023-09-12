@@ -1,0 +1,12 @@
+syntax = "proto3";
+package nativedwebhosting.nativedwebhosting;
+
+import "gogoproto/gogo.proto";
+import "nativedwebhosting/nativedwebhosting/params.proto";
+
+option go_package = "github.com/apoorv-2204/Native-DWeb-Hosting/x/nativedwebhosting/types";
+
+// GenesisState defines the nativedwebhosting module's genesis state.
+message GenesisState {
+  Params params = 1 [(gogoproto.nullable) = false];
+}
