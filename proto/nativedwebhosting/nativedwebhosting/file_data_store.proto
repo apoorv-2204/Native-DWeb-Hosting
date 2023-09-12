@@ -1,0 +1,8 @@
+syntax = "proto3";
+package nativedwebhosting.nativedwebhosting;
+
+option go_package = "github.com/apoorv-2204/Native-DWeb-Hosting/x/nativedwebhosting/types";
+
+message FileDataStore {
+   map<string, string> data = 1;
+}
