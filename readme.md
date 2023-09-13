@@ -1,5 +1,8 @@
-# Native Website Hosting on Blockchain
+# Native Website Hosting on Blockchain 
 Part of 100 builders 
+
+## ** minimum viable product is not yet completed **
+
 ## The Current State.
 The major focus of decentralisation using blockchain technology was on the backend, or infrastructure side of things, especially with smart contracts and decentralised applications (DApps) on blockchains like polygon,eth,atom,etc.
 
@@ -13,16 +16,28 @@ The objective of this is an attempt to host frontend websites directly from the 
 Create a Custom Blockchain that can host website from transaction
 
 
+---
 
-### How it will be when its built? 
-- Whatever front-end project you have compile and build. make sure you are able to run the build
-- Name the folder , and create a tx from the cli using giving path to the build, 
-- Note the tx hash , and go to node's endpoint /{tx hash}.Website is hosted itself from the blockchain node.
-
+<img src="diagrams/d1.png"  width="900"  height="500">
 
 ---
 
-<img src="diagrams/d1.png"  style="width: '600px' height: '400px'">
+## info
 
+
+<img src="diagrams/pitch/1.jpg"  width="900"  height="500"> <br>
+ ---
+<img src="diagrams/pitch/2.jpg"  width="900"  height="500"><br>
+ ---
+<img src="diagrams/pitch/3.jpg"  width="900"  height="500"><br>
 ---
-
+<img src="diagrams/pitch/4.jpg"  width="900"  height="500"><br>
+---
+<img src="diagrams/pitch/5.jpg"  width="900"  height="500"><br>
+---
+<img src="diagrams/pitch/6.jpg"  width="900"  height="500"><br>
+---
+<img src="diagrams/pitch/7.jpg"  width="900"  height="500"><br>
+---
+<img src="diagrams/pitch/8.jpg"  width="900"  height="500"><br>
+---
